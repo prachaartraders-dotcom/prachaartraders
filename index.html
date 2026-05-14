@@ -1,19 +1,3 @@
-# Prachaar Traders - Fresh Responsive Website Code
-
-The previous version had layout and image issues. This refreshed version is rebuilt with:
-
-* Proper mobile responsiveness
-* Correct product images
-* Better spacing and alignment
-* Cleaner professional layout
-* No overflowing/cutting sections
-* Better buttons and product cards
-* Proper laptop bag image
-* Stable responsive grid system
-
-Replace your entire `index.html` with this code:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,65 +18,63 @@ box-sizing:border-box;
 
 body{
 font-family:'Open Sans',sans-serif;
-background:#f5f7fa;
+background:#f4f6f9;
 color:#222;
 overflow-x:hidden;
+}
+
+img{
+width:100%;
+display:block;
 }
 
 h1,h2,h3{
 font-family:'Montserrat',sans-serif;
 }
 
-img{
-max-width:100%;
-display:block;
-}
-
 nav{
-background:#fff;
+background:#ffffff;
 padding:16px 5%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 2px 12px rgba(0,0,0,0.08);
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
 position:sticky;
 top:0;
 z-index:1000;
 }
 
 .logo h1{
-font-size:28px;
+font-size:30px;
 color:#002147;
 font-weight:800;
 letter-spacing:2px;
 }
 
 .logo p{
-color:#2e7d32;
 font-size:12px;
 letter-spacing:3px;
+color:#2e7d32;
 font-weight:700;
 }
 
 .tagline{
-color:#2e7d32;
-font-weight:700;
 font-size:14px;
-text-align:right;
+font-weight:700;
+color:#2e7d32;
 }
 
 .hero{
-background:linear-gradient(rgba(0,33,71,0.88),rgba(46,125,50,0.85)),
-url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1400&auto=format&fit=crop');
+background:linear-gradient(rgba(0,33,71,0.85),rgba(46,125,50,0.85)),url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1400&auto=format&fit=crop');
 background-size:cover;
 background-position:center;
+text-align:center;
 color:white;
 padding:90px 5%;
-text-align:center;
 }
 
 .hero h2{
-font-size:48px;
+font-size:52px;
 margin-bottom:20px;
 line-height:1.2;
 }
@@ -111,17 +93,16 @@ line-height:1.8;
 .trust-box{
 display:flex;
 justify-content:center;
-gap:18px;
 flex-wrap:wrap;
+gap:15px;
 margin-top:40px;
 }
 
 .trust-item{
-background:rgba(255,255,255,0.12);
-padding:14px 22px;
-border-radius:10px;
+background:rgba(255,255,255,0.15);
+padding:12px 18px;
+border-radius:8px;
 font-weight:600;
-backdrop-filter:blur(5px);
 }
 
 .section{
@@ -143,65 +124,57 @@ margin-bottom:15px;
 max-width:700px;
 margin:auto;
 line-height:1.7;
-color:#555;
+color:#666;
 }
 
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:28px;
+gap:25px;
 }
 
 .card{
-background:#fff;
+background:white;
 border-radius:16px;
 overflow:hidden;
 box-shadow:0 5px 18px rgba(0,0,0,0.08);
 transition:0.3s;
-display:flex;
-flex-direction:column;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-6px);
 }
 
 .card-image{
-height:240px;
+height:230px;
 overflow:hidden;
-background:#fff;
 }
 
 .card-image img{
-width:100%;
 height:100%;
 object-fit:cover;
 }
 
 .card-content{
 padding:22px;
-display:flex;
-flex-direction:column;
-flex:1;
 }
 
 .card-content h3{
+font-size:22px;
 color:#002147;
 margin-bottom:12px;
-font-size:22px;
 }
 
 .card-content p{
-color:#666;
-line-height:1.7;
-margin-bottom:24px;
 font-size:15px;
+line-height:1.7;
+color:#666;
+margin-bottom:22px;
 }
 
 .button-group{
 display:flex;
 gap:10px;
-margin-top:auto;
 }
 
 .btn{
@@ -222,10 +195,6 @@ background:#edf1f7;
 color:#002147;
 }
 
-.btn-detail:hover{
-background:#dfe7f2;
-}
-
 .btn-order{
 background:#002147;
 color:white;
@@ -238,10 +207,10 @@ background:#2e7d32;
 .custom-section{
 margin-top:70px;
 background:linear-gradient(135deg,#002147,#2e7d32);
-padding:50px 30px;
-border-radius:20px;
-text-align:center;
 color:white;
+padding:50px 30px;
+text-align:center;
+border-radius:20px;
 }
 
 .custom-section h2{
@@ -250,15 +219,15 @@ margin-bottom:18px;
 }
 
 .custom-section p{
-max-width:800px;
+max-width:750px;
 margin:auto;
 line-height:1.8;
-margin-bottom:28px;
+margin-bottom:25px;
 }
 
 .custom-btn{
 display:inline-block;
-padding:14px 26px;
+padding:14px 24px;
 background:white;
 color:#002147;
 text-decoration:none;
@@ -276,7 +245,7 @@ margin-top:70px;
 .footer-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:35px;
+gap:30px;
 }
 
 .footer-box h4{
@@ -286,8 +255,8 @@ margin-bottom:18px;
 
 .footer-box p{
 line-height:1.8;
-margin-bottom:10px;
 font-size:15px;
+margin-bottom:10px;
 }
 
 .copy{
@@ -307,12 +276,8 @@ gap:10px;
 text-align:center;
 }
 
-.hero{
-padding:70px 5%;
-}
-
 .hero h2{
-font-size:32px;
+font-size:34px;
 }
 
 .hero p{
@@ -325,10 +290,6 @@ font-size:30px;
 
 .button-group{
 flex-direction:column;
-}
-
-.card-image{
-height:220px;
 }
 
 .custom-section h2{
@@ -356,7 +317,7 @@ BRANDING. PROMOTIONS. TRUST.
 <h2>WE PROMOTE <span>BRANDS.</span> YOU GROW.</h2>
 
 <p>
-Premium customised promotional products and branding solutions designed to improve business visibility and create professional customer engagement.
+Premium customised promotional products and branding solutions for businesses, corporates and events.
 </p>
 
 <div class="trust-box">
@@ -371,7 +332,7 @@ Premium customised promotional products and branding solutions designed to impro
 <div class="section-title">
 <h2>OUR PRODUCT CATEGORIES</h2>
 <p>
-Professional customised promotional products with premium branding and logo printing.
+Professional customised products with premium branding and logo printing.
 </p>
 </div>
 
@@ -383,9 +344,7 @@ Professional customised promotional products with premium branding and logo prin
 </div>
 <div class="card-content">
 <h3>Plastic Water Bottles</h3>
-<p>
-Custom branded plastic water bottles with logo labels available in multiple sizes.
-</p>
+<p>Custom branded plastic bottles with premium logo labels.</p>
 <div class="button-group">
 <a href="catalogue.html" class="btn btn-detail">View Details</a>
 <button class="btn btn-order" onclick="openWhatsApp('Plastic Water Bottles')">Order Now</button>
@@ -399,9 +358,7 @@ Custom branded plastic water bottles with logo labels available in multiple size
 </div>
 <div class="card-content">
 <h3>Glass Bottles</h3>
-<p>
-Elegant straight glass bottles with premium customised logo printing.
-</p>
+<p>Elegant straight glass bottles with customised logo printing.</p>
 <div class="button-group">
 <a href="catalogue.html" class="btn btn-detail">View Details</a>
 <button class="btn btn-order" onclick="openWhatsApp('Glass Bottles')">Order Now</button>
@@ -415,9 +372,7 @@ Elegant straight glass bottles with premium customised logo printing.
 </div>
 <div class="card-content">
 <h3>Custom Laptop Bags</h3>
-<p>
-High-quality customised laptop bags with premium logo branding.
-</p>
+<p>Premium laptop bags with customised branding and logo printing.</p>
 <div class="button-group">
 <a href="catalogue.html" class="btn btn-detail">View Details</a>
 <button class="btn btn-order" onclick="openWhatsApp('Laptop Bags')">Order Now</button>
@@ -427,13 +382,11 @@ High-quality customised laptop bags with premium logo branding.
 
 <div class="card">
 <div class="card-image">
-<img src="https://images.unsplash.com/photo-1517842645767-c639042777db?q=80&w=1200&auto=format&fit=crop" alt="Diaries">
+<img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200&auto=format&fit=crop" alt="Diaries">
 </div>
 <div class="card-content">
 <h3>Custom Diaries</h3>
-<p>
-Executive diaries with customised company logo and premium finishing.
-</p>
+<p>Executive diaries with customised company logo and premium finish.</p>
 <div class="button-group">
 <a href="catalogue.html" class="btn btn-detail">View Details</a>
 <button class="btn btn-order" onclick="openWhatsApp('Custom Diaries')">Order Now</button>
@@ -447,9 +400,7 @@ Executive diaries with customised company logo and premium finishing.
 </div>
 <div class="card-content">
 <h3>Year Calendars</h3>
-<p>
-Customised promotional calendars with company branding and custom designs.
-</p>
+<p>Custom promotional calendars with company branding and designs.</p>
 <div class="button-group">
 <a href="catalogue.html" class="btn btn-detail">View Details</a>
 <button class="btn btn-order" onclick="openWhatsApp('Year Calendars')">Order Now</button>
@@ -459,13 +410,11 @@ Customised promotional calendars with company branding and custom designs.
 
 <div class="card">
 <div class="card-image">
-<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" alt="Other Products">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" alt="Other Commodities">
 </div>
 <div class="card-content">
 <h3>Other Commodities</h3>
-<p>
-Request customised promotional products according to your business requirements.
-</p>
+<p>Request customised promotional products according to your business needs.</p>
 <div class="button-group">
 <a href="catalogue.html" class="btn btn-detail">View Details</a>
 <button class="btn btn-order" onclick="openWhatsApp('Other Commodities')">Order Now</button>
@@ -477,26 +426,21 @@ Request customised promotional products according to your business requirements.
 
 <div class="custom-section">
 <h2>Need Any Other Customised Product?</h2>
-
 <p>
-We also provide branding solutions for office essentials, gifting items, promotional materials and many other trading products.
+We also provide branding solutions for gifting items, office products and promotional materials.
 </p>
-
-<a href="https://wa.me/919667110814" class="custom-btn">
-Request Custom Product
-</a>
+<a href="https://wa.me/919667110814" class="custom-btn">Request Custom Product</a>
 </div>
 
 </section>
 
 <footer>
-
 <div class="footer-grid">
 
 <div class="footer-box">
 <h4>Prachaar Traders</h4>
 <p>
-Professional trading and branding solutions for businesses, corporates and promotional campaigns.
+Professional trading and branding solutions for businesses and promotional campaigns.
 </p>
 </div>
 
@@ -508,7 +452,7 @@ Professional trading and branding solutions for businesses, corporates and promo
 </div>
 
 <div class="footer-box">
-<h4>Business Services</h4>
+<h4>Services</h4>
 <p>✔ Custom Branding</p>
 <p>✔ Promotional Products</p>
 <p>✔ Corporate Gifting</p>
@@ -520,107 +464,13 @@ Professional trading and branding solutions for businesses, corporates and promo
 <div class="copy">
 © 2026 PRACHAAR TRADERS. All Rights Reserved.
 </div>
-
 </footer>
 
 <script>
-
 function openWhatsApp(product){
 window.open(`https://wa.me/919667110814?text=Hello%20Prachaar%20Traders,%20I%20want%20to%20enquire%20about%20${product}`,'_blank');
 }
-
 </script>
 
 </body>
 </html>
-```
-
----
-
-# Create `catalogue.html`
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Catalogue - Prachaar Traders</title>
-
-<style>
-
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:linear-gradient(135deg,#002147,#2e7d32);
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-color:white;
-padding:20px;
-box-sizing:border-box;
-}
-
-.box{
-background:rgba(255,255,255,0.12);
-padding:45px 30px;
-border-radius:18px;
-text-align:center;
-max-width:600px;
-width:100%;
-backdrop-filter:blur(6px);
-}
-
-h1{
-font-size:42px;
-margin-bottom:18px;
-}
-
-p{
-line-height:1.8;
-font-size:17px;
-}
-
-a{
-display:inline-block;
-margin-top:28px;
-padding:14px 24px;
-background:white;
-color:#002147;
-text-decoration:none;
-border-radius:8px;
-font-weight:700;
-}
-
-@media(max-width:768px){
-
-h1{
-font-size:30px;
-}
-
-p{
-font-size:15px;
-}
-
-}
-
-</style>
-</head>
-<body>
-
-<div class="box">
-<h1>Detailed Catalogue Coming Soon</h1>
-
-<p>
-Bottle designs, dimensions, cap types, print areas and detailed product catalogues will be uploaded soon.
-</p>
-
-<a href="index.html">Back to Homepage</a>
-</div>
-
-</body>
-</html>
-```
-
-Upload both files again to Vercel and redeploy.

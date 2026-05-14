@@ -25,9 +25,7 @@
             font-family: 'Open Sans', sans-serif;
         }
 
-        h1, h2, h3, .brand-name {
-            font-family: 'Montserrat', sans-serif;
-        }
+        h1, h2, h3, .brand-name { font-family: 'Montserrat', sans-serif; }
 
         body {
             background-color: var(--white);
@@ -48,30 +46,8 @@
             box-shadow: 0 2px 15px rgba(0,0,0,0.1);
         }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo-text {
-            line-height: 1;
-        }
-
-        .logo-text h1 {
-            color: var(--navy);
-            font-size: 1.5rem;
-            letter-spacing: 2px;
-            font-weight: 800;
-        }
-
-        .logo-text p {
-            color: var(--green);
-            font-size: 0.7rem;
-            letter-spacing: 3px;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
+        .logo-text h1 { color: var(--navy); font-size: 1.5rem; letter-spacing: 2px; font-weight: 800; }
+        .logo-text p { color: var(--green); font-size: 0.7rem; letter-spacing: 3px; font-weight: 600; text-transform: uppercase; }
 
         /* --- Hero Section --- */
         .hero {
@@ -79,32 +55,9 @@
             color: var(--white);
             padding: 80px 5%;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            text-transform: uppercase;
         }
 
         .hero h2 span { color: var(--light-green); }
-
-        .hero p {
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
-            opacity: 0.9;
-        }
-
-        .trust-icons {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 40px;
-            flex-wrap: wrap;
-        }
 
         .trust-item {
             display: flex;
@@ -116,109 +69,79 @@
         }
 
         /* --- Dashboard Grid --- */
-        .dashboard-container {
-            padding: 60px 5%;
-            background: var(--gray);
-        }
+        .dashboard-container { padding: 60px 5%; background: var(--gray); }
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-header h2 { color: var(--navy); font-size: 2rem; position: relative; padding-bottom: 10px; }
+        .section-header h2::after { content: ''; position: absolute; bottom: 0; left: 25%; width: 50%; height: 4px; background: var(--green); }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-header h2 {
-            color: var(--navy);
-            font-size: 2rem;
-            position: relative;
-            display: inline-block;
-            padding-bottom: 10px;
-        }
-
-        .section-header h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 25%;
-            width: 50%;
-            height: 4px;
-            background: var(--green);
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
 
         .product-card {
             background: var(--white);
             border-radius: 12px;
-            padding: 30px;
+            padding: 25px;
             text-align: center;
             transition: var(--transition);
-            border-bottom: 5px solid transparent;
-            cursor: pointer;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        .product-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            border-bottom: 5px solid var(--green);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
+        .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
 
-        .product-card i {
-            font-size: 3rem;
-            color: var(--navy);
+        /* Realistic Image Styling */
+        .product-img-wrapper {
+            width: 100%;
+            height: 200px;
             margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .product-img-wrapper img {
+            max-height: 100%;
+            width: auto;
+            object-fit: contain;
             transition: var(--transition);
         }
 
-        .product-card:hover i {
-            color: var(--green);
+        .product-card:hover img { transform: scale(1.1); }
+
+        /* Button Styling */
+        .button-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 15px;
         }
 
-        .product-card h3 {
-            margin-bottom: 10px;
-            color: var(--navy);
-            text-transform: uppercase;
-            font-size: 1.1rem;
-        }
-
-        .product-card p {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .btn-order {
-            background: var(--navy);
-            color: white;
-            border: none;
-            padding: 10px 20px;
+        .btn-base {
+            padding: 10px 5px;
             border-radius: 4px;
             font-weight: 600;
+            font-size: 0.8rem;
             cursor: pointer;
             transition: var(--transition);
-            width: 100%;
+            border: none;
+            text-transform: uppercase;
         }
 
-        .btn-order:hover {
-            background: var(--green);
-        }
+        .btn-catalogue { background: var(--gray); color: var(--navy); border: 1px solid var(--navy); }
+        .btn-catalogue:hover { background: var(--navy); color: white; }
+        .btn-order { background: var(--navy); color: white; }
+        .btn-order:hover { background: var(--green); }
 
-        /* --- Modal --- */
+        /* --- Modals --- */
         .modal {
             display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0, 33, 71, 0.9);
             z-index: 2000;
-            justify-content: center;
-            align-items: center;
+            justify-content: center; align-items: center;
             backdrop-filter: blur(8px);
         }
 
@@ -226,173 +149,124 @@
             background: var(--white);
             padding: 40px;
             border-radius: 15px;
-            width: 90%;
-            max-width: 500px;
-            position: relative;
-            text-align: center;
+            width: 90%; max-width: 500px;
+            position: relative; text-align: center;
         }
 
-        .close-btn {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--navy);
-        }
-
-        .contact-box {
-            margin-top: 25px;
-            text-align: left;
-        }
+        .close-btn { position: absolute; top: 15px; right: 20px; font-size: 1.5rem; cursor: pointer; color: var(--navy); }
 
         .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 15px;
-            background: var(--gray);
-            margin-bottom: 10px;
-            border-radius: 8px;
-            text-decoration: none;
-            color: var(--navy);
-            font-weight: 600;
-            transition: var(--transition);
-        }
-
-        .contact-item:hover {
-            background: var(--green);
-            color: white;
+            display: flex; align-items: center; gap: 15px; padding: 12px;
+            background: var(--gray); margin-bottom: 10px; border-radius: 8px;
+            text-decoration: none; color: var(--navy); font-weight: 600;
         }
 
         /* --- Footer --- */
-        footer {
-            background: var(--navy);
-            color: var(--white);
-            padding: 50px 5% 20px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-info h4 {
-            color: var(--light-green);
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-
-        .footer-info p {
-            margin-bottom: 10px;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .copyright {
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-            font-size: 0.8rem;
-            opacity: 0.7;
-        }
-
-        /* --- Responsive --- */
-        @media (max-width: 768px) {
-            .hero h2 { font-size: 1.8rem; }
-            .trust-icons { gap: 10px; }
-            .trust-item { padding: 8px 12px; font-size: 0.8rem; }
-        }
+        footer { background: var(--navy); color: var(--white); padding: 50px 5% 20px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+        .copyright { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 20px; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo-container">
-            <div class="logo-text">
-                <h1>PRACHAAR</h1>
-                <p>TRADERS</p>
-            </div>
+        <div class="logo-text">
+            <h1>PRACHAAR</h1>
+            <p>TRADERS</p>
         </div>
-        <div style="color: var(--green); font-weight: 700; font-size: 0.9rem; text-align: right;">
-            BRANDING. PROMOTIONS. TRUST.
-        </div>
+        <div style="color: var(--green); font-weight: 700; font-size: 0.9rem;">BRANDING. PROMOTIONS. TRUST.</div>
     </nav>
 
     <section class="hero">
         <h2>WE PROMOTE <span>BRANDS.</span> YOU GROW.</h2>
-        <p>Get premium commodities at market prices with your custom branding. Professional advertisement that pays for itself.</p>
-        
-        <div class="trust-icons">
+        <p>Premium commodities at market prices with your custom branding. Professional advertisement that pays for itself.</p>
+        <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
             <div class="trust-item"><i class="fas fa-handshake"></i> TRUSTED PARTNER</div>
             <div class="trust-item"><i class="fas fa-truck-fast"></i> TIMELY DELIVERY</div>
-            <div class="trust-item"><i class="fas fa-shield-check"></i> QUALITY ASSURED</div>
         </div>
     </section>
 
     <div class="dashboard-container">
-        <div class="section-header">
-            <h2>OUR PRODUCT DASHBOARD</h2>
-        </div>
+        <div class="section-header"><h2>OUR PRODUCT DASHBOARD</h2></div>
 
         <div class="grid">
-            <div class="product-card" onclick="openModal('Water Bottles (250ml, 500ml, 1L)')">
-                <i class="fas fa-faucet-drip"></i>
-                <h3>Water Bottles</h3>
-                <p>Available in 250ml, 500ml, & 1L. High-quality label printing.</p>
-                <button class="btn-order">ORDER NOW</button>
+            <!-- Product 1: Plastic Water Bottles -->
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <!-- High quality plastic bottle image with label space -->
+                    <img src="https://images.unsplash.com/photo-1616150638538-ffb0679a3fc4?q=80&w=400&auto=format&fit=crop" alt="Real Plastic Bottle">
+                </div>
+                <h3>Plastic Water Bottles</h3>
+                <p>250ml, 500ml, & 1L. Custom branding on high-grade plastic.</p>
+                <div class="button-group">
+                    <button class="btn-base btn-catalogue" onclick="openCatalogue()">Catalogue</button>
+                    <button class="btn-base btn-order" onclick="openOrderModal('Plastic Water Bottles')">Order Now</button>
+                </div>
             </div>
 
-            <div class="product-card" onclick="openModal('Glass Water Bottles')">
-                <i class="fas fa-wine-bottle"></i>
-                <h3>Glass Bottles</h3>
-                <p>Premium glass finish with precision logo printing for elite branding.</p>
-                <button class="btn-order">ORDER NOW</button>
+            <!-- Product 2: Glass Bottles -->
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <!-- Real glass bottle image -->
+                    <img src="https://images.unsplash.com/photo-1602143352538-4669f6983050?q=80&w=400&auto=format&fit=crop" alt="Real Glass Bottle">
+                </div>
+                <h3>Glass Water Bottles</h3>
+                <p>Premium glass finish with straight, precise logo printing.</p>
+                <div class="button-group">
+                    <button class="btn-base btn-catalogue" onclick="openCatalogue()">Catalogue</button>
+                    <button class="btn-base btn-order" onclick="openOrderModal('Glass Water Bottles')">Order Now</button>
+                </div>
             </div>
 
-            <div class="product-card" onclick="openModal('Branded Mugs')">
-                <i class="fas fa-mug-hot"></i>
-                <h3>Mugs</h3>
-                <p>Ceramic and travel mugs with durable, vibrant logo printing.</p>
-                <button class="btn-order">ORDER NOW</button>
+            <!-- Product 3: Mugs -->
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?q=80&w=400&auto=format&fit=crop" alt="Branded Mug">
+                </div>
+                <h3>Branded Mugs</h3>
+                <p>Ceramic mugs with vibrant, long-lasting brand logos.</p>
+                <div class="button-group">
+                    <button class="btn-base btn-catalogue" onclick="openCatalogue()">Catalogue</button>
+                    <button class="btn-base btn-order" onclick="openOrderModal('Branded Mugs')">Order Now</button>
+                </div>
             </div>
 
-            <div class="product-card" onclick="openModal('Branded Cups')">
-                <i class="fas fa-cup-togo"></i>
-                <h3>Cups</h3>
-                <p>Paper and plastic cups for events and daily corporate use.</p>
-                <button class="btn-order">ORDER NOW</button>
-            </div>
-
-            <div class="product-card" onclick="openModal('Misc. Commodities')">
-                <i class="fas fa-boxes-stacked"></i>
-                <h3>Other Commodities</h3>
-                <p>Custom branding available on various other essential trading goods.</p>
-                <button class="btn-order">ORDER NOW</button>
+            <!-- Product 4: Cups -->
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=400&auto=format&fit=crop" alt="Branded Cups">
+                </div>
+                <h3>Branded Cups</h3>
+                <p>Paper and plastic cups for corporate events and daily use.</p>
+                <div class="button-group">
+                    <button class="btn-base btn-catalogue" onclick="openCatalogue()">Catalogue</button>
+                    <button class="btn-base btn-order" onclick="openOrderModal('Branded Cups')">Order Now</button>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- Catalogue "Coming Soon" Modal -->
+    <div id="catalogueModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeCatalogue()">&times;</span>
+            <i class="fas fa-hourglass-half" style="font-size: 3rem; color: var(--green); margin-bottom: 20px;"></i>
+            <h2 style="color: var(--navy);">COMING SOON</h2>
+            <p>Our detailed product catalogue with sizes, dimensions, and design options is currently being updated.</p>
+            <button class="btn-base btn-order" style="margin-top:20px; width:auto; padding:10px 30px;" onclick="closeCatalogue()">Back to Home</button>
+        </div>
+    </div>
+
+    <!-- Order Modal -->
     <div id="contactModal" class="modal">
         <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <h2 id="modalProductTitle" style="color: var(--navy);">PRODUCT DETAILS</h2>
-            <p style="margin-top: 10px;">Contact us for customized quotes and branding options.</p>
-            
+            <span class="close-btn" onclick="closeOrderModal()">&times;</span>
+            <h2 id="modalProductTitle" style="color: var(--navy);">ORDER DETAILS</h2>
+            <p style="margin: 10px 0 20px;">Contact us for customized branding and quotes.</p>
             <div class="contact-box">
-                <a href="tel:+919667110814" class="contact-item">
-                    <i class="fas fa-phone-alt"></i> +91 9667110814
-                </a>
-                <a href="mailto:prachaartraders@gmail.com" class="contact-item">
-                    <i class="fas fa-envelope"></i> prachaartraders@gmail.com
-                </a>
-                <a href="https://wa.me/919667110814" class="contact-item" style="background-color: #25d366; color: white;">
-                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                </a>
+                <a href="tel:+919667110814" class="contact-item"><i class="fas fa-phone-alt"></i> +91 9667110814</a>
+                <a href="mailto:prachaartraders@gmail.com" class="contact-item"><i class="fas fa-envelope"></i> prachaartraders@gmail.com</a>
+                <a href="https://wa.me/919667110814" class="contact-item" style="background:#25d366; color:white;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
             </div>
         </div>
     </div>
@@ -401,66 +275,34 @@
         <div class="footer-grid">
             <div class="footer-info">
                 <h4>Prachaar Traders</h4>
-                <p>A proprietorship firm dedicated to growing your business through strategic commodity branding.</p>
+                <p>Proprietorship firm growing your business through commodity branding.</p>
             </div>
             <div class="footer-info">
-                <h4>Contact Details</h4>
+                <h4>Contact</h4>
                 <p><i class="fas fa-phone"></i> +91 9667110814</p>
-                <p><i class="fas fa-envelope"></i> prachaartraders@gmail.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> Patparganj East Delhi 110092</p>
-            </div>
-            <div class="footer-info">
-                <h4>Website</h4>
-                <p><i class="fas fa-globe"></i> prachaartraders.vercel.app</p>
+                <p><i class="fas fa-map-marker-alt"></i> Patparganj East, Delhi 110092</p>
             </div>
         </div>
         <div class="copyright">
-            &copy; 2026 PRACHAAR TRADERS. All Rights Reserved. Branding. Promotions. Trust.
+            &copy; 2026 PRACHAAR TRADERS. All Rights Reserved.
         </div>
     </footer>
 
     <script>
-        const modal = document.getElementById('contactModal');
-        const modalTitle = document.getElementById('modalProductTitle');
+        const cModal = document.getElementById('catalogueModal');
+        const oModal = document.getElementById('contactModal');
+        const oTitle = document.getElementById('modalProductTitle');
 
-        function openModal(productName) {
-            modalTitle.innerText = productName;
-            modal.style.display = 'flex';
-            // Scale animation
-            document.querySelector('.modal-content').style.transform = 'scale(1)';
+        function openCatalogue() { cModal.style.display = 'flex'; }
+        function closeCatalogue() { cModal.style.display = 'none'; }
+
+        function openOrderModal(name) { oTitle.innerText = name; oModal.style.display = 'flex'; }
+        function closeOrderModal() { oModal.style.display = 'none'; }
+
+        window.onclick = function(e) {
+            if (e.target == cModal) closeCatalogue();
+            if (e.target == oModal) closeOrderModal();
         }
-
-        function closeModal() {
-            modal.style.display = 'none';
-        }
-
-        // Close modal on outside click
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                closeModal();
-            }
-        }
-
-        // Entrance Animations for cards
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.product-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'all 0.6s ease-out';
-            observer.observe(card);
-        });
     </script>
 </body>
 </html>
